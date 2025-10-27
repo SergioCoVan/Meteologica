@@ -20,6 +20,10 @@
 
 <style>
 
+  main {
+    min-height: calc(100dvh - 52px);
+  }
+  
   #charts {
     display: flex;
     flex-direction: column;
