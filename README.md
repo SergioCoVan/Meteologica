@@ -1,5 +1,5 @@
 Clonar el repositorio
-Tener instalado Node.js si no lo esta (puede hacerse desde su página oficial: https://nodejs.org/es)
+Tener instalado Node.js si no lo está (puede hacerse desde su página oficial: https://nodejs.org/es)
 Entrar en terminal a la carpeta server e instalar las dependencias (npm i)
 Luego ejecutar el server (npm run dev)
 Entrar en una nueva terminal a la carpeta client e instalar las dependencias (npm i)
