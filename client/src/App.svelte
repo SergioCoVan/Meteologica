@@ -6,6 +6,8 @@
   import { listenToEvents } from './lib/sse';
   import potencia from "./assets/images/pot.svg";
   import temperatura from "./assets/images/temp.svg";
+  import Navbar from "./lib/components/Navbar.svelte";
+  import Footer from "./lib/components/Footer.svelte";
 
   onMount(async () => {
     const { temperature, power } = await loadInitialData();
@@ -52,15 +54,20 @@
     width: 40px;
   }
 </style>
-
-<h1>Monitor en Tiempo Real</h1>
-<div id="charts">
-  <div class="chart-container">
-    <div id="tempChart" class="chart-color"></div>
-    <img src={temperatura} alt="icono de temperatura" class="img-t">
+<header>
+  <Navbar />
+</header>
+<main>
+  <h1>Monitor en Tiempo Real</h1>
+  <div id="charts">
+    <div class="chart-container">
+      <div id="tempChart" class="chart-color"></div>
+      <img src={temperatura} alt="icono de temperatura" class="img-t">
+    </div>
+    <div class="chart-container">
+      <div id="powerChart" class="chart-color"></div>
+      <img src={potencia} alt="icono de potencia" class="img-p">
+    </div>
   </div>
-  <div class="chart-container">
-    <div id="powerChart" class="chart-color"></div>
-    <img src={potencia} alt="icono de potencia" class="img-p">
-  </div>
-</div>
+</main>
+<Footer />
